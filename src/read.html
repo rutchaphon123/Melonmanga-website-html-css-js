@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="discription" content="Free read Manga and Manhwa">
+    <meta name="keywords" content="Manga,Comics,Manhwa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="./icons8-melon-60.png">
+    <title>Melonmanga</title>
+</head>
+<body>
+      
+      <div class="container-read">
+      <navbar id="thePage">
+        <a href="#" class="btn1">🡨 back</a>
+        <a href="chapter-view.html" class="btn1">Home</a>
+        <div class="custom-select" style="width:200px;">
+        
+          <select>
+            <option value="0">Select Chapter: 🡣</option>
+            <option value="1">Chapter 1</option>
+            <option value="2">Chapter 2</option>
+            <option value="3">Chapter 3</option>
+            <option value="4">Chapter 4</option>
+            <option value="5">Chapter 5</option>
+            <option value="6">Chapter 6</option>
+            <option value="7">Chapter 7</option>
+            <option value="8">Chapter 8</option>
+            <option value="9">Chapter 9</option>
+            <option value="10">Chapter 10</option>
+            <option value="11">Chapter 11</option>
+            <option value="12">Chapter 12</option>
+          </select>
+        </div>
+        <a href="#" class="btn1">next 🡢</a>
+      </navbar>
+      
+        <img src="./imgs/to_your/1.jpg"/>
+        <img src="./imgs/to_your/2.jpg"/>
+        <img src="./imgs/to_your/3.jpg"/>
+        <img src="./imgs/to_your/4.jpg"/>
+      
+  </div>
+  <script src="javascript.js"></script>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("thePage").style.top = "0";
+      } else {
+        document.getElementById("thePage").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }</script>
+</body>
+</html>
