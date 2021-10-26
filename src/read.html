@@ -47,8 +47,13 @@
         <img src="./imgs/to_your/2.jpg"/>
         <img src="./imgs/to_your/3.jpg"/>
         <img src="./imgs/to_your/4.jpg"/>
-      
-  </div>
+      <div class="footer">
+        <div class="progress-container">
+          <div class="progress-bar" id="bar"></div>
+        </div>
+      </div>
+    </div>
+    </div>
   <script src="javascript.js"></script>
   <script>
     var prevScrollpos = window.pageYOffset;
@@ -60,6 +65,11 @@
         document.getElementById("thePage").style.top = "-50px";
       }
       prevScrollpos = currentScrollPos;
-    }</script>
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document	.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 </html>
