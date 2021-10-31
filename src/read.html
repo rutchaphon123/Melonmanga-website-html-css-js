@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="./icons8-melon-60.png">
     <title>Melonmanga</title>
-</head>
-<body>
-      
-      <div class="container-read">
+  </head>
+  <body>
+    <div class="container-read">
       <navbar id="thePage">
         <a href="#" class="btn1">🡨 back</a>
         <a href="chapter-view.html" class="btn1">Home</a>
         <div class="custom-select" style="width:200px;">
-        
           <select>
             <option value="0">Select Chapter: 🡣</option>
             <option value="1">Chapter 1</option>
@@ -42,11 +40,10 @@
         </div>
         <a href="#" class="btn1">next 🡢</a>
       </navbar>
-      
-        <img src="./imgs/to_your/1.jpg"/>
-        <img src="./imgs/to_your/2.jpg"/>
-        <img src="./imgs/to_your/3.jpg"/>
-        <img src="./imgs/to_your/4.jpg"/>
+      <img src="./imgs/to_your/1.jpg" />
+      <img src="./imgs/to_your/2.jpg" />
+      <img src="./imgs/to_your/3.jpg" />
+      <img src="./imgs/to_your/4.jpg" />
       <div class="footer">
         <div class="progress-container">
           <div class="progress-bar" id="bar"></div>
@@ -54,22 +51,22 @@
       </div>
     </div>
     </div>
-  <script src="javascript.js"></script>
-  <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("thePage").style.top = "0";
-      } else {
-        document.getElementById("thePage").style.top = "-50px";
+    <script src="javascript.js"></script>
+    <script>
+      const prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("thePage").style.top = "0";
+        } else {
+          document.getElementById("thePage").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("bar").style.width = scrolled + "%";
       }
-      prevScrollpos = currentScrollPos;
-      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      let height = document.documentElement.scrollHeight - document	.documentElement.clientHeight;
-      let scrolled = (winScroll / height) * 100;
-      document.getElementById("bar").style.width = scrolled + "%";
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
